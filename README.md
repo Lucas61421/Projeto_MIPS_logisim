@@ -14,7 +14,7 @@ O código foi implementado utilizando **segmentação de memória** (.data e .te
 
 **Declaração em MIPS (.data):**
 
-\t\t tabuleiro: .word  1, 2, 3, 4,  
+tabuleiro: .word  1, 2, 3, 4,  
 \t\t                  1, 2, 3, 4,  
 \t\t                  5, 6, 7, 8,  
 \t\t                  5, 6, 7, 8
