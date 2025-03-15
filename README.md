@@ -1,7 +1,5 @@
-# Projeto_MIPS_logisim
+# Memory Game - Implementação em MIPS Assembly 📌 Visão Geral
 
-Memory Game - Implementação em MIPS Assembly
-📌 Visão Geral
 Este projeto consiste na implementação de um jogo da memória em Assembly MIPS, utilizando o simulador MARS. O jogo segue as regras tradicionais: o jogador escolhe duas cartas, que são temporariamente reveladas. Se forem iguais, permanecem visíveis; caso contrário, são ocultadas novamente. O objetivo é encontrar todos os pares para impressão da mensagem final do jogo.
 🏗 Estrutura do Código
 O código foi implementado utilizando segmentação de memória (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
