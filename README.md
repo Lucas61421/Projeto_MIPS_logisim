@@ -27,6 +27,7 @@ revelado: .word 0, 0, 0, 0,<br>
 
 ### **2️⃣ Entrada e Saída de Dados**
 -O jogo interage com o jogador utilizando syscalls:
+
  -Leitura de coordenadas (linha e coluna) → syscall 5 (entrada de inteiro).
  -Exibição de mensagens → syscall 4 (impressão de string).
  -Exibição do tabuleiro → Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
