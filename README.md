@@ -63,15 +63,40 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 
 ## **📌 Principais Labels no Código**
 <div align="center">
-| **Label**            | **Função** |
-|:-----------------:|:----------------------------:|
-| `main`          | Inicializa o jogo. |
-| `loop_principal`| Controla a execução principal. |
-| `jogar`         | Lê entradas e controla a lógica do jogo. |
-| `par_errado`    | Esconde as cartas se não forem um par. |
-| `mostrar_tabuleiro` | Exibe o estado atual do tabuleiro. |
-| `fim`           | Exibe a mensagem final e encerra o jogo. |
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Função</th>
+  </tr>
+  <tr>
+    <td><code>main</code></td>
+    <td>Inicializa o jogo.</td>
+  </tr>
+  <tr>
+    <td><code>loop_principal</code></td>
+    <td>Controla a execução principal.</td>
+  </tr>
+  <tr>
+    <td><code>jogar</code></td>
+    <td>Lê entradas e controla a lógica do jogo.</td>
+  </tr>
+  <tr>
+    <td><code>par_errado</code></td>
+    <td>Esconde as cartas se não forem um par.</td>
+  </tr>
+  <tr>
+    <td><code>mostrar_tabuleiro</code></td>
+    <td>Exibe o estado atual do tabuleiro.</td>
+  </tr>
+  <tr>
+    <td><code>fim</code></td>
+    <td>Exibe a mensagem final e encerra o jogo.</td>
+  </tr>
+</table>
+
 </div>
+
 
 
 ## **✅ Conclusão**
