@@ -60,7 +60,7 @@ add $t3, $t3, $t2  # endereço do elemento na matriz revelado
 
 Isso garante que o código acesse corretamente os valores no **tabuleiro** e na matriz **revelado**.
 
-
+<p align="center">
 ## **📌 Principais Labels no Código**
 | **Label**            | **Função** |
 |:-----------------:|:----------------------------:|
@@ -70,7 +70,7 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 | `par_errado`    | Esconde as cartas se não forem um par. |
 | `mostrar_tabuleiro` | Exibe o estado atual do tabuleiro. |
 | `fim`           | Exibe a mensagem final e encerra o jogo. |
-
+</p>
 
 
 ## **✅ Conclusão**
