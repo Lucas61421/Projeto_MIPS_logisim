@@ -9,8 +9,8 @@ O código foi implementado utilizando **segmentação de memória** (.data e .te
 
 ### **1️⃣ Estruturas de Dados**
 -O jogo utiliza duas matrizes principais para armazenar informações:
- -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
- -revelado: Indica se uma carta está **visível (1)** ou **escondida (0)**.
+ -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.<br> 
+ -revelado: Indica se uma carta está **visível (1)** ou **escondida (0)**.<br> 
 
 **Declaração em MIPS (.data):**
 
@@ -76,8 +76,9 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 
 ## **✅ Conclusão**
 A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
- -**Manipulação de matrizes e memória**.
- -**Uso de syscalls para entrada/saída no console**.
- -**Controle de fluxo e de laços em Assembly**.
+
+ -**Manipulação de matrizes e memória**.<br> 
+ -**Uso de syscalls para entrada/saída no console**.<br> 
+ -**Controle de fluxo e de laços em Assembly**.<br> 
  
 O código mantém a lógica original do jogo e funciona no simulador **MARS**. 🎮✨
