@@ -13,15 +13,15 @@ O jogo utiliza duas matrizes principais para armazenar informações:
  -revelado: Indica se uma carta está visível (1) ou escondida (0).
 
 Declaração em MIPS (.data):
-tabuleiro: .word 1, 2, 3, 4, 
-                 1, 2, 3, 4,
-                 5, 6, 7, 8, 
-                 5, 6, 7, 8
+tabuleiro: .word 1, 2, 3, 4,<br> 
+                 1, 2, 3, 4,<br>
+                 5, 6, 7, 8,<br> 
+                 5, 6, 7, 8<br>
 
-revelado: .word 0, 0, 0, 0,
-                0, 0, 0, 0,
-                0, 0, 0, 0,
-                0, 0, 0, 0
+revelado: .word 0, 0, 0, 0,<br>
+                0, 0, 0, 0,<br>
+                0, 0, 0, 0,<br>
+                0, 0, 0, 0<br>
 
 
 ## 2️⃣ Entrada e Saída de Dados
@@ -73,7 +73,7 @@ Isso garante que o código acesse corretamente os valores no tabuleiro e na matr
 
 ## 📌 Principais Labels no Código
 | Label            | Função |
-|:-----------------:|:----------------------------:|
+|:-----------------:|----------------------------:|
 | `main`          | Inicializa o jogo. |
 | `loop_principal`| Controla a execução principal. |
 | `jogar`         | Lê entradas e controla a lógica do jogo. |
