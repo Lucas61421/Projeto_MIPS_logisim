@@ -8,7 +8,7 @@ Este projeto consiste na implementação de um **jogo da memória** em Assembly 
 O código foi implementado utilizando **segmentação de memória** (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
 
 ### **1️⃣ Estruturas de Dados**
-O jogo utiliza duas matrizes principais para armazenar informações:
+-O jogo utiliza duas matrizes principais para armazenar informações:
   -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
   -revelado: Indica se uma carta está **visível (1)** ou **escondida (0)**.
 
