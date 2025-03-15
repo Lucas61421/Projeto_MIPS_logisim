@@ -1,12 +1,17 @@
-# Memory Game - Implementação em MIPS Assembly 📌
+# Memory Game - Implementação em MIPS Assembly 
 
+## 📌 Visão Geral:
 Este projeto consiste na implementação de um jogo da memória em Assembly MIPS, utilizando o simulador MARS. O jogo segue as regras tradicionais: o jogador escolhe duas cartas, que são temporariamente reveladas. Se forem iguais, permanecem visíveis; caso contrário, são ocultadas novamente. O objetivo é encontrar todos os pares para impressão da mensagem final do jogo.
-🏗 Estrutura do Código
+
+
+## 🏗 Estrutura do Código
 O código foi implementado utilizando segmentação de memória (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
-1️⃣ Estruturas de Dados
+
+## 1️⃣ Estruturas de Dados
 O jogo utiliza duas matrizes principais para armazenar informações:
-tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
-revelado: Indica se uma carta está visível (1) ou escondida (0).
+ -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
+ -revelado: Indica se uma carta está visível (1) ou escondida (0).
+
 Declaração em MIPS (.data):
 tabuleiro: .word 1, 2, 3, 4, 1, 2, 3, 4,
                      5, 6, 7, 8, 5, 6, 7, 8
@@ -14,12 +19,16 @@ tabuleiro: .word 1, 2, 3, 4, 1, 2, 3, 4,
 revelado: .word 0, 0, 0, 0, 0, 0, 0, 0,
                   0, 0, 0, 0, 0, 0, 0, 0
 
-2️⃣ Entrada e Saída de Dados
+
+## 2️⃣ Entrada e Saída de Dados
 O jogo interage com o jogador utilizando syscalls:
-Leitura de coordenadas (linha e coluna) → syscall 5 (entrada de inteiro).
-Exibição de mensagens → syscall 4 (impressão de string).
-Exibição do tabuleiro → Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
+
+-Leitura de coordenadas (linha e coluna) → syscall 5 (entrada de inteiro).
+-Exibição de mensagens → syscall 4 (impressão de string).
+-Exibição do tabuleiro → Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
+
 Exemplo de leitura de coordenadas:
+
 li $v0, 4
 la $a0, mensagem_linha
 syscall
@@ -28,20 +37,26 @@ li $v0, 5  # Leitura de inteiro (linha escolhida)
 syscall
 move $s0, $v0  # Armazena linha na variável s0
 
-3️⃣ Lógica Principal do Jogo
-Exibir o tabuleiro (mostrar_tabuleiro).
-Receber as coordenadas das cartas escolhidas (ler_numero).
-Revelar temporariamente as cartas (revelar_cartas).
-Verificar se formam um par (checar_par).
-Se forem iguais, marcam-se como fixas.
-Se forem diferentes, são ocultadas novamente (esconder_cartas).
-Repetir o processo até encontrar todos os pares (loop_principal).
-Exibir a mensagem de vitória (fim).
-4️⃣ Acesso às Matrizes
+
+## 3️⃣ Lógica Principal do Jogo
+1. Exibir o tabuleiro (mostrar_tabuleiro).
+2. Receber as coordenadas das cartas escolhidas (ler_numero).
+3. Revelar temporariamente as cartas (revelar_cartas).
+4. Verificar se formam um par (checar_par).
+   -Se forem iguais, marcam-se como fixas.
+   -Se forem diferentes, são ocultadas novamente (esconder_cartas).
+5. Repetir o processo até encontrar todos os pares (loop_principal).
+6. Exibir a mensagem de vitória (fim).
+
+
+## 4️⃣ Acesso às Matrizes
 Para o acesso a uma matriz 4x4 em MIPS é preciso calcular corretamente os endereços de memória:
+
 Fórmula: 
 endereço_final = endereço_base + (r * 4 + c) x 4
+
 Cada elemento ocupa 4 bytes ou 32 bits (.word).
+
 Implementação em MIPS:
 mul $t2, $s0, $t1  # linha * tamanho da matriz
 add $t2, $t2, $s1  # soma a coluna
@@ -50,34 +65,24 @@ la $t3, revelado
 add $t3, $t3, $t2  # endereço do elemento na matriz revelado
 
 Isso garante que o código acesse corretamente os valores no tabuleiro e na matriz revelado.
-📌 Principais Labels no Código
-Label
-Função
-main
-Inicializa o jogo.
-loop_principal
-Controla a execução principal.
-jogar
-Lê entradas e controla a lógica do jogo.
-par_errado
-Esconde as cartas se não forem um par.
-ler_numero
-Lê um número digitado pelo jogador.
-revelar_cartas
-Revela temporariamente as cartas escolhidas.
-esconder_cartas
-Esconde cartas que não formam par.
-checar_par
-Verifica se duas cartas são iguais.
-mostrar_tabuleiro
-Exibe o estado atual do tabuleiro.
-fim
-Exibe a mensagem final e encerra o jogo.
 
-✅ Conclusão
+
+## 📌 Principais Labels no Código
+| Label            | Função |
+|:-----------------:|:----------------------------:|
+| `main`          | Inicializa o jogo. |
+| `loop_principal`| Controla a execução principal. |
+| `jogar`         | Lê entradas e controla a lógica do jogo. |
+| `par_errado`    | Esconde as cartas se não forem um par. |
+| `mostrar_tabuleiro` | Exibe o estado atual do tabuleiro. |
+| `fim`           | Exibe a mensagem final e encerra o jogo. |
+
+
+
+## ✅ Conclusão
 A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
-Manipulação de matrizes e memória.
-Uso de syscalls para entrada/saída no console.
-Controle de fluxo e de laços em Assembly.
+ -Manipulação de matrizes e memória.
+ -Uso de syscalls para entrada/saída no console.
+ -Controle de fluxo e de laços em Assembly.
+ 
 O código mantém a lógica original do jogo e funciona no simulador MARS.  🎮✨
-
