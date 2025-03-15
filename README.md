@@ -8,11 +8,12 @@ Este projeto consiste na implementação de um jogo da memória em Assembly MIPS
 O código foi implementado utilizando segmentação de memória (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
 
 ### **1️⃣ Estruturas de Dados**
-O jogo utiliza duas matrizes principais para armazenar informações:
+-O jogo utiliza duas matrizes principais para armazenar informações:
  -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
  -revelado: Indica se uma carta está visível (1) ou escondida (0).
 
 Declaração em MIPS (.data):
+
 tabuleiro: .word 1, 2, 3, 4,<br> 
                  1, 2, 3, 4,<br>
                  5, 6, 7, 8,<br> 
@@ -25,11 +26,10 @@ revelado: .word 0, 0, 0, 0,<br>
 
 
 ### **2️⃣ Entrada e Saída de Dados**
-O jogo interage com o jogador utilizando syscalls:
-
--Leitura de coordenadas (linha e coluna) → syscall 5 (entrada de inteiro).
--Exibição de mensagens → syscall 4 (impressão de string).
--Exibição do tabuleiro → Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
+-O jogo interage com o jogador utilizando syscalls:
+ -Leitura de coordenadas (linha e coluna) → syscall 5 (entrada de inteiro).
+ -Exibição de mensagens → syscall 4 (impressão de string).
+ -Exibição do tabuleiro → Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
 
 Exemplo de leitura de coordenadas:
 
@@ -84,7 +84,7 @@ Isso garante que o código acesse corretamente os valores no tabuleiro e na matr
 
 
 ## **✅ Conclusão**
-A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
+-A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
  -Manipulação de matrizes e memória.
  -Uso de syscalls para entrada/saída no console.
  -Controle de fluxo e de laços em Assembly.
