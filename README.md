@@ -62,7 +62,7 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 
 
 ## **📌 Principais Labels no Código**
-<p align="center">
+<div align="center">
 | **Label**            | **Função** |
 |:-----------------:|:----------------------------:|
 | `main`          | Inicializa o jogo. |
