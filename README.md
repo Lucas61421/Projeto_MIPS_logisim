@@ -26,11 +26,10 @@ revelado: .word 0, 0, 0, 0,<br>
 
 
 ### **2️⃣ Entrada e Saída de Dados**
--O jogo interage com o jogador utilizando **syscalls**:
-
- -**Leitura de coordenadas (linha e coluna)** → syscall 5 (entrada de inteiro).<br> 
- -**Exibição de mensagens** → syscall 4 (impressão de string).<br> 
- -**Exibição do tabuleiro**→ Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.<br> 
+- O jogo interage com o jogador utilizando **syscalls**:
+  - **Leitura de coordenadas (linha e coluna)** → syscall 5 (entrada de inteiro).<br> 
+  - **Exibição de mensagens** → syscall 4 (impressão de string).<br> 
+  - **Exibição do tabuleiro**→ Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.<br> 
 
 
 ### **3️⃣ Lógica Principal do Jogo**
@@ -38,8 +37,8 @@ revelado: .word 0, 0, 0, 0,<br>
 2. **Receber as coordenadas das cartas escolhidas (ler_numero)**.
 3. **Revelar temporariamente as cartas (revelar_cartas)**.
 4. **Verificar se formam um par (checar_par)**.
-   -Se forem **iguais**, marcam-se como fixas.
-   -Se forem **diferentes**, são ocultadas novamente (esconder_cartas).
+   - Se forem **iguais**, marcam-se como fixas.
+   - Se forem **diferentes**, são ocultadas novamente (esconder_cartas).
 5. **Repetir o processo até encontrar todos os pares (loop_principal)**.
 6. **Exibir a mensagem de vitória (fim)**.
 
@@ -76,9 +75,8 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 
 ## **✅ Conclusão**
 A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
-
- -**Manipulação de matrizes e memória**.<br> 
- -**Uso de syscalls para entrada/saída no console**.<br> 
- -**Controle de fluxo e de laços em Assembly**.<br> 
+  - **Manipulação de matrizes e memória**.<br> 
+  - **Uso de syscalls para entrada/saída no console**.<br> 
+  - **Controle de fluxo e de laços em Assembly**.<br> 
  
 O código mantém a lógica original do jogo e funciona no simulador **MARS**. 🎮✨
