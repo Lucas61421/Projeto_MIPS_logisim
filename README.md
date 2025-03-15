@@ -9,6 +9,7 @@ O código foi implementado utilizando **segmentação de memória** (.data e .te
 
 ### **1️⃣ Estruturas de Dados**
 -O jogo utiliza duas matrizes principais para armazenar informações:
+
  -tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.<br> 
  -revelado: Indica se uma carta está **visível (1)** ou **escondida (0)**.<br> 
 
@@ -28,9 +29,9 @@ revelado: .word 0, 0, 0, 0,<br>
 ### **2️⃣ Entrada e Saída de Dados**
 -O jogo interage com o jogador utilizando **syscalls**:
 
- -**Leitura de coordenadas (linha e coluna)** → syscall 5 (entrada de inteiro).
- -**Exibição de mensagens** → syscall 4 (impressão de string).
- -**Exibição do tabuleiro**→ Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.
+ -**Leitura de coordenadas (linha e coluna)** → syscall 5 (entrada de inteiro).<br> 
+ -**Exibição de mensagens** → syscall 4 (impressão de string).<br> 
+ -**Exibição do tabuleiro**→ Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.<br> 
 
 
 ### **3️⃣ Lógica Principal do Jogo**
