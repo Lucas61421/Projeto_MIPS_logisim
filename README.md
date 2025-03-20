@@ -1,13 +1,13 @@
 # **Memory Game - Implementação em MIPS Assembly** 
 
-## **📌 Visão Geral:**
+## ** Visão Geral:**
 Este projeto consiste na implementação de um **jogo da memória** em Assembly **MIPS**, utilizando o simulador **MARS**. O jogo segue as regras tradicionais: o jogador escolhe duas cartas, que são temporariamente reveladas. Se forem iguais, permanecem visíveis; caso contrário, são ocultadas novamente. O objetivo é encontrar todos os pares para impressão da mensagem final do jogo.
 
 
-## **🏗 Estrutura do Código**
+## ** Estrutura do Código**
 O código foi implementado utilizando **segmentação de memória** (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
 
-### **1️⃣ Estruturas de Dados**
+### **1️ Estruturas de Dados**
 - O jogo utiliza duas matrizes principais para armazenar informações:  
   - tabuleiro: Armazena os valores das cartas, garantindo que cada par aparece duas vezes.
   - revelado: Indica se uma carta está **visível (1)** ou **escondida (0)**.
@@ -23,14 +23,14 @@ revelado: .word
 0, 0, 0, 0
 
 
-### **2️⃣ Entrada e Saída de Dados**
+### **2️ Entrada e Saída de Dados**
 - O jogo interage com o jogador utilizando **syscalls**:
   - **Leitura de coordenadas (linha e coluna)** → syscall 5 (entrada de inteiro).<br> 
   - **Exibição de mensagens** → syscall 4 (impressão de string).<br> 
   - **Exibição do tabuleiro**→ Controlado pela matriz revelado, imprimindo valores ou * para cartas ocultas.<br> 
 
 
-### **3️⃣ Lógica Principal do Jogo**
+### **3️ Lógica Principal do Jogo**
 1. **Exibir o tabuleiro (mostrar_tabuleiro)**.
 2. **Receber as coordenadas das cartas escolhidas (ler_numero)**.
 3. **Revelar temporariamente as cartas (revelar_cartas)**.
@@ -41,7 +41,7 @@ revelado: .word
 6. **Exibir a mensagem de vitória (fim)**.
 
 
-### **4️⃣ Acesso às Matrizes**
+### ** Acesso às Matrizes**
 Para o acesso a uma **matriz 4x4** em MIPS é preciso calcular corretamente os endereços de memória:
 
 ### **Fórmula**: 
@@ -59,7 +59,7 @@ add $t3, $t3, $t2  # endereço do elemento na matriz revelado
 Isso garante que o código acesse corretamente os valores no **tabuleiro** e na matriz **revelado**.
 
 
-## **📌 Principais Labels no Código**
+## ** Principais Labels no Código**
 | **Label**            | **Função** |
 |:-----------------:|:----------------------------:|
 | `main`          | Inicializa o jogo. |
@@ -70,10 +70,10 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 | `fim`           | Exibe a mensagem final e encerra o jogo. |
 
 
-## **✅ Conclusão**
+## ** Conclusão**
 A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
   - **Manipulação de matrizes e memória**.<br> 
   - **Uso de syscalls para entrada/saída no console**.<br> 
   - **Controle de fluxo e de laços em Assembly**.<br> 
  
-O código mantém a lógica original do jogo e funciona no simulador **MARS**. 🎮✨
+O código mantém a lógica original do jogo e funciona no simulador **MARS**. 
