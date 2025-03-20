@@ -1,10 +1,10 @@
 # **Memory Game - Implementação em MIPS Assembly** 
 
-## ** Visão Geral:**
+## **Visão Geral:**
 Este projeto consiste na implementação de um **jogo da memória** em Assembly **MIPS**, utilizando o simulador **MARS**. O jogo segue as regras tradicionais: o jogador escolhe duas cartas, que são temporariamente reveladas. Se forem iguais, permanecem visíveis; caso contrário, são ocultadas novamente. O objetivo é encontrar todos os pares para impressão da mensagem final do jogo.
 
 
-## ** Estrutura do Código**
+## **Estrutura do Código**
 O código foi implementado utilizando **segmentação de memória** (.data e .text) e está dividido em múltiplas funções, cada uma responsável por uma parte específica do jogo.
 
 ### **1️ Estruturas de Dados**
@@ -41,7 +41,7 @@ revelado: .word
 6. **Exibir a mensagem de vitória (fim)**.
 
 
-### ** Acesso às Matrizes**
+### **Acesso às Matrizes**
 Para o acesso a uma **matriz 4x4** em MIPS é preciso calcular corretamente os endereços de memória:
 
 ### **Fórmula**: 
@@ -59,7 +59,7 @@ add $t3, $t3, $t2  # endereço do elemento na matriz revelado
 Isso garante que o código acesse corretamente os valores no **tabuleiro** e na matriz **revelado**.
 
 
-## ** Principais Labels no Código**
+## **Principais Labels no Código**
 | **Label**            | **Função** |
 |:-----------------:|:----------------------------:|
 | `main`          | Inicializa o jogo. |
@@ -70,7 +70,7 @@ Isso garante que o código acesse corretamente os valores no **tabuleiro** e na 
 | `fim`           | Exibe a mensagem final e encerra o jogo. |
 
 
-## ** Conclusão**
+## **Conclusão**
 A implementação do Memory Game em MIPS Assembly permitiu reforçar conceitos fundamentais da arquitetura MIPS, como:
   - **Manipulação de matrizes e memória**.<br> 
   - **Uso de syscalls para entrada/saída no console**.<br> 
